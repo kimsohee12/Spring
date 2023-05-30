@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 의존성 주입 : 필요한 객체 ( Bean)등록 -->
+	<!-- 1.Hikaricp 빈(객체) 등록 -->
+	<!-- id : 변수 이름 class : class 형태 property : 속성 (필드)-->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1524:xe"/>
+      <property name="username" value="service"/>
+      <property name="password" value="12345"/>
+   </bean>
+   <!-- 2. DataSource  빈 등록 : Spring 통해서 Oracle 에 접근-->
+   <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+      <constructor-arg ref="hikariConfig" />
+   </bean>
+   <!-- 3.Mybatis 빈 등록  -->
+   <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource"/>
+   </bean>
+   
+</beans>
