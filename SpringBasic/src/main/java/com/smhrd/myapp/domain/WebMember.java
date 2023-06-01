@@ -12,6 +12,14 @@ public class WebMember {
 		this.tel = tel;
 		this.address = address;
 	}
+	
+
+	public WebMember(String email, String pw) {
+		
+		this.email = email;
+		this.pw = pw;
+	}
+
 
 	public String getEmail() {
 		return email;

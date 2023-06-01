@@ -7,7 +7,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="resources/assets/css/main.css" />
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
@@ -16,7 +16,6 @@
 </style>
 
 <body style="text-align: center;">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Menu -->
@@ -27,20 +26,21 @@
 		
 		<table>
 			<tr>
+			<!-- EL 표기법 사용 -->
 				<td>Email</td>
-				<td></td>	
+				<td> ${ joinEmail} </td>	
 			</tr>
 		</table>
-		<a href="index.jsp"><input type="button" value="메인페이지로"></a> </nav>
+		<a href="/myapp"><input type="button" value="메인페이지로"></a> </nav>
 	</div>
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
+	<script src="resources/assets/js/jquery.min.js"></script>
+	<script src="resources/assets/js/jquery.scrolly.min.js"></script>
+	<script src="resources/assets/js/jquery.scrollex.min.js"></script>
+	<script src="resources/assets/js/skel.min.js"></script>
+	<script src="resources/assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+	<script src="resources/assets/js/main.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.myapp.mapper.MemberMapper">
+   <insert id="join" parameterType="com.smhrd.myapp.domain.WebMember">
+      insert into webmember values (#{email},#{pw},#{tel},#{address})
+   </insert>
+   <select id="login" parameterType="com.smhrd.myapp.domain.WebMember" resultType="com.smhrd.myapp.domain.WebMember">
+      select * from webmember where email=#{email} and pw=#{pw}
+   </select>
+   <select id="select" resultType="com.smhrd.myapp.domain.WebMember">
+      select * from webmember
+   </select>
+</mapper>
